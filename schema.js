@@ -28,7 +28,8 @@ type Session {
     day: String,
     format: String,
     track: String @deprecated(reason: "too many sessions do not fit into a single track"),
-    level:String
+    level:String,
+    speakers: [Speaker]
 }
 type Speaker {
     id: ID!
