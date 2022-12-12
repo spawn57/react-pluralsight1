@@ -13,6 +13,10 @@ class SessionAPI extends DataSource {
     getSessions() {
         return sessions;
     }
+
+    getSessionById(id) {
+        return sessions.find(s => s.id === parseInt(id));
+    }
 }
 
 module.exports = SessionAPI;
