@@ -9,7 +9,14 @@ const dataSources = () => ({
     sessionAPI: new SessionAPI()
 });
 
-const server = new ApolloServer({typeDefs, resolvers, dataSources});
+
+const server = new ApolloServer({
+    typeDefs, 
+    resolvers, 
+    dataSources,
+    // introspection: false,
+    // playground: false, 
+});
 
 server
     .listen({port: process.env.PORT || 4000 })
